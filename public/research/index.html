@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang=""><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Research</title>
+    <meta name="description" content="A simple monospaced resume theme for Hugo.">
+    <meta name="author" content='Neelu S. Kalani'>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css" integrity="sha512-rt/SrQ4UNIaGfDyEXZtNcyWvQeOq0QLygHluFQcSjaGB04IxWhal71tKuzP6K8eYXYB6vJV4pHkXcmFGGQ1/0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css" integrity="sha512-vaoopdl+FJahyY2ddhsbDj8yDiRuyUYH/vIjF3z+cBg0sKc07NAQmUYli8volCGlW9OwlQyjVsr7Lh6qAManlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/sass/researcher.min.css">
+    <link rel="icon" type="image/ico" href="https://example.com/favicon.ico">
+    </head>
+
+    <body><div class="container mt-5">
+    <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://example.com" title="Neelu S. Kalani">
+          
+          Neelu S. Kalani
+        </a>
+        <div class="navbar-nav flex-row flex-wrap justify-content-center">
+            
+                
+                
+                    <a class="nav-item nav-link" href="/" title="Home">
+                        Home
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/research" title="Research">
+                        Research
+                    </a>
+                    
+                
+            
+        </div>
+    </nav>
+</div>
+<hr>
+<div id="content">
+<div class="container">
+    <h2 id="research-interests">Research Interests</h2>
+<!-- <figure class="avatar2"><img src="/neelu-photo-paris.jpeg"
+         alt="avatar"/>
+</figure>
+ -->
+<div align="justified">
+My research interests broadly include confidential computing, computer systems and computer architecture. Recently, during my PhD, my interests revolve around building trustworthy systems (confidential computing environments, isolation monitors, root of trust, trusted runtimes) and RISC-V. During my masters, I worked on the microarchitectural side of things such as optimising the performance of micro-op caches (at Intel Labs) and optimising energy and performance of hardware cache prefetchers.   
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<!-- <b><u>PhD Thesis</u>:</b> My PhD thesis has so far revolved around building trustworthy systems. -->
+<h3 id="building-trustworthy-systems">Building Trustworthy Systems</h3>
+<p>Traditionally, cloud service providers (CSP) have been bestowed with immense control over their customer&rsquo;s data. The purpose of confidential cloud computing is to take this control from the CSP and grant it to customers instead. Though the design space in this field has been widely explored in the last decade, there are obstacles in the form of prioprietary and specialised designs which can keep confidential cloud computing from reach its potential. With my advisor (Prof. Edouard Bugnion), colleagues at EPFL and collaborators at Microsoft Research Cambridge, we are trying to rethink the solution by keeping the entire systems stack in perspective. To this end, we are building a versatile isolation monitor which provides a new system abstraction of trust domains. Trust domains are isolated orthogonally to existing system abstractions and privilege hierarchies. The isolation monitor, called Tyche (the Greek goddess of fate, some say Tyche lets &ldquo;good things happen&rdquo;), leverages existing hardware security primitives to isolate trust domains. For instance, Intel VT-x on x86 and PMPs on RISC-V. I am personally responsible for the development of Tyche on RISC-V for QEMU and StarFive VisionFive2. If you find this interesting, check out our <a href="https://dl.acm.org/doi/abs/10.1145/3593856.3595900">HotOS 2023 paper</a>.</p>
+<p>A root of trust (RoT) is needed to establish trust in a privileged isolation monitor like Tyche. A dynamic RoT can help exclude the platform firmware, that runs in the same privileged mode as the monitor, from the trusted compute base (TCB). Unfortunately, existing solutions still include such firmware in the static root of trust chain, because there is no way to isolate the software executing in privileged modes like EL3/M-mode/SMM/etc. Instead of falling down the same rabbit hole of introducing a new privilege mode, we are designing ISA extensions to isolate M-mode software which can enable DRoT in RISC-V with a minimal TCB. If root of trust also interests you, I summarize the existing work and discuss the future trends in this field in my <a href="https://drive.google.com/file/d/1sH3dWik4bU6BGEwlTeFY4uQ2dEFqH5jI/view?usp=sharing">SOSP 2023 doctoral workshop paper</a>.</p>
+<p>Trusted runtimes are often overprivileged which can lead to Iago attacks. We worked on minimizing their privileges to harden the security guarantees towards the security sensitive applications, essentially enforcing the least privilege principle. To do this, we proposed an extension to RISC-V PMP; and evaluated it using the Keystone TEE framework. Check out our paper at <a href="https://dl.acm.org/doi/10.1145/3578359.359304">SysTEX 2023</a> for more details.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<h3 id="internship-at-intel-labs">Internship at Intel Labs</h3>
+<p>During my internship at Intel Labs, Bangalore, with my manager Dr. Niranjan Soundararajan, I worked on optimising different parts of the processor pipeline. We improved front-end throughput with enhancements to the micro-op cache. Check out our <a href="https://patentimages.storage.googleapis.com/6a/8b/13/075d7355b2a9bc/US20230103206A1.pdf">patent</a> for more details. We also worked on optimising the performance of loads and stores in the processor pipeline.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<h3 id="hardware-cache-prefetching">Hardware Cache Prefetching</h3>
+<p><strong><u>Master&rsquo;s Thesis</u>:</strong> My master&rsquo;s thesis, supervised by Dr. Biswabandan Panda, revolved around hardware cache prefetching. It was funded by the semiconductor research corporation (SRC) and liaisoned by Intel Labs, Bangalore. We proposed a novel mechanism to identify critical instructions using ROB occupancy and prefetch only for those to reduce energy consumption in the memory subsystem while retaining performance. Check out our <a href="https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf">IEEE CAL paper</a> for more details.</p>
+<p>We also participated in the instruction prefetching championship colocated with ISCA 2020 and <a href="https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf">our paper</a> had the 5th best performing instruction prefetcher.</p>
+</div>
+
+</div>
+
+        </div><div id="footer" class="mb-5">
+    <hr>
+    
+    <div class="container text-center">
+        
+            <a href="https://www.linkedin.com/in/neelukalani7/" class="fa-brands fa-linkedin fa-1x" title="Linkedin"></a>
+        
+            <a href="mailto:neelu.kalani@epfl.ch" class="fas fa-envelope fa-1x" title="E-mail"></a>
+        
+            <a href="https://scholar.google.com/citations?user=jf8SU3kAAAAJ&amp;hl=en" class="ai ai-google-scholar fa-1x" title="Scholar"></a>
+        
+            <a href="https://github.com/neeluk7/" class="fa-brands fa-github fa-1x" title="Github"></a>
+        
+            <a href="https://twitter.com/iHaveTheKeyToJ1" class="fab fa-twitter fa-1x" title="Twitter"></a>
+        
+    </div>
+    
+    
+        <div class="container text-center">
+            <a href="https://example.com" title="By Neelu S. Kalani" ><small>By Neelu S. Kalani</small></a>
+        </div>
+    
+</div>
+
+    </body>
+</html>
