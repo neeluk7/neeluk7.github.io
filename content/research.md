@@ -27,7 +27,7 @@ During my internship at Intel Labs, Bangalore, with my manager Dr. Niranjan Soun
 
 ### Hardware Cache Prefetching
 
-**<u>Master's Thesis</u>:** My master's thesis, supervised by Dr. Biswabandan Panda, revolved around hardware cache prefetching. It was funded by the semiconductor research corporation (SRC) and liaisoned by Intel Labs, Bangalore. We proposed a novel mechanism to identify critical instructions using ROB occupancy and prefetch only for those to reduce energy consumption in the memory subsystem while retaining performance. Check out our [IEEE CAL paper](https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf) for more details. 
+My master's thesis, supervised by Dr. Biswabandan Panda, revolved around hardware cache prefetching. It was funded by the semiconductor research corporation (SRC) and liaisoned by Intel Labs, Bangalore. We proposed a novel mechanism to identify critical instructions using ROB occupancy and prefetch only for those to reduce energy consumption in the memory subsystem while retaining performance. Check out our [IEEE CAL paper](https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf) for more details. 
 
 We also participated in the instruction prefetching championship colocated with ISCA 2020 and [our paper](https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf) had the 5th best performing instruction prefetcher. 
 </div>

@@ -7,7 +7,7 @@ title = "Home"
 
 {{< figure class="avatar" src="/neelu-photo.jpeg" alt="avatar">}}
 
-<p style="text-align:justify; margin: 0 180px 0 0">Hi, I am a third year PhD student at EPFL, Switzerland working on confidential computing in the Data Center Systems Laboratory <a href="https://www.epfl.ch/labs/dcsl/">DCSL</a> advised by Prof. Edouard Bugnion. Before that, I was a master's student at IIT Kanpur, India where I worked on hardware cache prefetching and was advised by Dr. Biswabandan Panda. During my master's, I was an intern at Intel Labs, Bangalore for six months where I worked with Dr. Niranjan Soundararajan on optimizing different aspects in the processor pipeline. Find more details on my research <a href="/research">here</a>.  
+<p style="text-align:justify; margin: 0 180px 0 0">Hi, I am a third year PhD student at EPFL, Switzerland working on confidential computing in the Data Center Systems Laboratory <a href="https://www.epfl.ch/labs/dcsl/">DCSL</a> advised by Prof. Edouard Bugnion. Before that, I was a master's student at IIT Kanpur, India where I worked on hardware cache prefetching and was advised by Dr. Biswabandan Panda. During my master's, I was an intern at Intel Labs, Bangalore for six months where I worked with Dr. Niranjan Soundararajan on optimizing different aspects in the processor pipeline. Find more details on my research <a href="/research">here</a> and my CV <a href="https://drive.google.com/file/d/1ZuqmIGA7qz1DQO9IAyrCaoXFdXKmouYM/view?usp=sharing">here</a>.  
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <!-- This is a Hugo based resume template. You can find the full source code on
@@ -171,7 +171,7 @@ I enjoy watching Netflix and reading. When I was younger (don't we all miss thos
 
 Email: neelu.kalani@epfl.ch
 \
-Office: INN 235 at EPFL Campus 
+Office: INN 235 at EPFL Campus, Lausanne, Switzerland 
 <!-- 
 ## Typography
 
