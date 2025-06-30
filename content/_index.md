@@ -7,7 +7,7 @@ title = "Home"
 
 {{< figure class="avatar" src="/neelu-photo.jpeg" alt="avatar">}}
 
-<p style="text-align:justify; margin: 0 180px 0 0">Hi, I am a third year PhD student at EPFL, Switzerland working on confidential computing in the Data Center Systems Laboratory <a href="https://www.epfl.ch/labs/dcsl/">DCSL</a> advised by Prof. Edouard Bugnion. Before that, I was a master's student at IIT Kanpur, India where I worked on hardware cache prefetching and was advised by Dr. Biswabandan Panda. During my master's, I was an intern at Intel Labs, Bangalore for six months where I worked with Dr. Niranjan Soundararajan on optimizing different aspects in the processor pipeline. Find more details on my research <a href="/research">here</a> and my CV <a href="https://drive.google.com/file/d/1ZuqmIGA7qz1DQO9IAyrCaoXFdXKmouYM/view?usp=sharing">here</a>.  
+<p style="text-align:justify; margin: 0 180px 0 0">Hi, I am a PhD student at EPFL since fall 2021, Switzerland working on confidential computing for RISC-V, advised by <a href="https://en.wikipedia.org/wiki/Edouard_Bugnion">Prof. Edouard Bugnion</a> and <a href="https://people.csail.mit.edu/bthom/">Prof. Thomas Bourgeat</a>. I am especially interested in RISC-V Physical Memory Protection technology (PMP) and RISC-V firmware. In 2024, I was an intern in the Security department at IBM Research, Zurich to improve the security of context switches across security domains by leveraging the formal specification of the RISC-V ISA in Sail. Before that, I was a master's student at IIT Kanpur, India where I worked on hardware cache prefetching, advised by Dr. Biswabandan Panda. In 2021, I was an intern at Intel Labs, Bangalore for six months where I worked with Dr. Niranjan Soundararajan on optimizing different aspects in the processor pipeline. Find more about my research <a href="/research">here</a> and my CV <a href="https://drive.google.com/file/d/1xdd-aPaTTrNVzadJu9SPjlnnN7udhOGv/view?usp=share_link">here</a>.
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <!-- This is a Hugo based resume template. You can find the full source code on
@@ -15,6 +15,16 @@ title = "Home"
 
 ## Publications and Patents 
 <!-- * #### **<span style="color:#2980B9">Creating Trust by Abolishing Hierarchies.</span>** --> 
+<b> Save what must be saved: Secure Context Switching with Sailor.</b>
+<br>
+USENIX Security 2025 <a href="https://arxiv.org/abs/2502.06609"><i class="fa fa-file-pdf-o" style="color:red"></i></a>
+<br>
+**<span style="color:#117864">Neelu S. Kalani</span>**, Thomas Bourgeat, Guerney D. H. Hunt, and Wojciech Ozga</p>
+<b> Kicking the Firmware Out of the TCB with the Miralis Virtual Firmware Monitor.</b>
+<br>
+KISV @ SOSP 2024 <a href="https://dl.acm.org/doi/10.1145/3698576.3698764"><i class="fa fa-file-pdf-o" style="color:red"></i></a>
+<br>
+Charly Castes, **<span style="color:#117864">Neelu S. Kalani</span>**, Sofia Saltovskaia, Noé Terrier, Abel Vexina Wilkinson and Edouard Bugnion</p>
 
 <b> Creating Trust by Abolishing Hierarchies.</b> 
 \
@@ -34,11 +44,17 @@ SysDW @ SOSP 2023 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://d
 \
 **<span style="color:#117864">Neelu S. Kalani</span>** 
 
-<b>Caching based on Branch Instructions in a Processor.</b> 
+<b>Caching based on Branch Instructions in a Processor.</b>
 \
-US Patent US2023/0103206A1 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://patentimages.storage.googleapis.com/6a/8b/13/075d7355b2a9bc/US20230103206A1.pdf)
+US Patent US2023/0103206A1 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://patents.google.com/patent/US20230103206A1/en)
 \
-Niranjan Soundararajan, Sreenivas Subramoney, **<span style="color:#117864">Neelu S. Kalani</span>**, Vishal Gupta 
+Niranjan Soundararajan, Sreenivas Subramoney, **<span style="color:#117864">Neelu S. Kalani</span>**, Vishal Gupta
+
+<b>Selective provisioning of supplementary micro-operation cache resources.</b> 
+\
+US Patent US2023/0418757A1 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://patents.google.com/patent/US20230418757A1/en)
+\
+Niranjan Soundararajan, Sreenivas Subramoney, Vishal Gupta, **<span style="color:#117864">Neelu S. Kalani</span>**
 
 <b>Instruction Criticality based Energy-efficient Hardware Data Prefetching.</b> 
 \
@@ -73,17 +89,29 @@ SysTEX @ EuroSys 2023
 
 ## Mentoring Students 
 
-<b>Establishing Dynamic Root of Trust for RISC-V </b> 
+<b> Custom ISA Extension for Privileged Software Isolation </b>
 \
-Student: Alexandre Meïer Doukhan 
+Student: Youssef Mansour, Summer@EPFL Internship, 2025
+
+<b> Performance and Security of RISC-V Security Primitives </b>
 \
-Bachelor Thesis [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://drive.google.com/file/d/1Zl19XfZex1en6NDNteDAK-Re58Fva0UC/view?usp=sharing) 
+Student: Mohamed Anas Ennahir, Summer in the Lab Internship, 2025
+
+<b> On Software-based solutions for Dynamic Root of Trust on RISC-V </b>
+\
+Student: Alexandre Meïer Doukhan, Masters Project, 2024 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://drive.google.com/file/d/1U9cW97d5VjVKKJ0ufM43uCO0xoJMM-xQ/view?usp=share_link)
+
+<b>Firmware Vrtualization with Mirage</b>
+\
+Student: Abel Vexina Wilkinson, Masters Project, 2024 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://drive.google.com/file/d/1XQYfyHVPiJIbjcfmNhKD6fD5TqU3dIes/view?usp=share_link)
+
+<b> Establishing Dynamic Root of Trust for RISC-V </b> 
+\
+Student: Alexandre Meïer Doukhan, Bachelor Thesis, 2023 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://drive.google.com/file/d/1Zl19XfZex1en6NDNteDAK-Re58Fva0UC/view?usp=sharing) 
 
 <b> Providing Remote Attestation for Trust Domains </b>
 \
-Student: Pavle Janevski 
-\
-Summer@EPFL Internship 
+Student: Pavle Janevski, Summer@EPFL Internship, 2023 
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
@@ -97,7 +125,7 @@ Prof. Carmela Troncoso (Fall 2023) and Prof. Edouard Bugnion (Fall 2022)
 
 <b>Advanced Topics on Privacy Enhancing Technologies</b>, EPFL 
 \
-Prof. Carmela Troncoso (Spring 2023) 
+Prof. Carmela Troncoso (Spring 2023, Spring 2024) and Dr. Theresa Stadler (Spring 2025) 
 
 <b> Fundamentals of Computing (Head TA)</b>, IIT Kanpur
 \
@@ -113,6 +141,14 @@ Prof. Biswabandan Panda (Spring 2020)
 ## Invited Talks 
 
 The following is a list of the talks I've given so far. I've also put the links to the slides/posters in case you are interested. :smile:  
+
+<b>Confidential Computing and Trusted Boot</b>
+\
+IBM Research, Zurich and Oracle, Zurich (Dec 2024)
+
+<b>Secure Dyanmic Root of Trust with FlashPoint</b>
+\
+Qualcomm Innovation Fellowship (QIF) Europe 2024 (I won the fellowship :relaxed:)
 
 <b>A RISC-V Extension to Minimize Privileges of Enclave Runtimes</b>
 \
@@ -153,7 +189,7 @@ Qualcomm Innovation Fellowship (QIF) India 2020 Finalist Talk
 
 <b>EPFL graduate student association member (called [EPIC](https://www.epfl.ch/campus/associations/list/epic/))</b>
 \
-Since 2022. 
+2022-2024. 
 
 <b> Volunteer for winter school</b>
 \
