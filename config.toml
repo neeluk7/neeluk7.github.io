@@ -44,7 +44,7 @@ googleAnalytics = "G-VCDPNZSN2W"  # add your tracking id
 
 
 [permalinks]
-  "/" = "/:filename"
+  "/" = "/:contentbasename"
 
 [menu]
   [[menu.main]]
