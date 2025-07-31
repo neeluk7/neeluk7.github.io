@@ -14,12 +14,16 @@ title = "Home"
 [GitHub](https://github.com/ojroques/hugo-researcher). --> 
 
 ## Publications and Patents 
-<!-- * #### **<span style="color:#2980B9">Creating Trust by Abolishing Hierarchies.</span>** --> 
 <b> Save what must be saved: Secure Context Switching with Sailor.</b>
 <br>
 USENIX Security 2025 <a href="https://arxiv.org/abs/2502.06609"><i class="fa fa-file-pdf-o" style="color:red"></i></a>
 <br>
 **<span style="color:#117864">Neelu S. Kalani</span>**, Thomas Bourgeat, Guerney D. H. Hunt, and Wojciech Ozga</p>
+<b>Rethinking the confidential cloud through a unified low-level abstraction for composable isolation.</b>
+\
+ArXiv Version 2025 [<i class="fa fa-file-pdf-o" style="color:red"></i>](https://arxiv.org/abs/2507.12364)
+\
+Charly Castes, Adrien Ghosn, **<span style="color:#117864">Neelu S. Kalani</span>**, Yuchen Qian, Marios Kogias and Edouard Bugnion</p>
 <b> Kicking the Firmware Out of the TCB with the Miralis Virtual Firmware Monitor.</b>
 <br>
 KISV @ SOSP 2024 <a href="https://dl.acm.org/doi/10.1145/3698576.3698764"><i class="fa fa-file-pdf-o" style="color:red"></i></a>
