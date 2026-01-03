@@ -19,11 +19,13 @@ Trusted runtimes are often overprivileged which can lead to Iago attacks. We wor
 
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 
-### Internship at IBM Research, Zurich 
+### Internship at IBM Research, Zurich, 2024
 
-During my internship at IBM Research, Zurich, I worked on improving the security of context switch code in privileged software by gathering ISA-level insights from the formal specification of the ISA written in machine-readable Sail. The Sail model is officially adopted as the ground-truth ISA specification by the RISC-V foundation. We leverage Sail to automatically extract which ISA-level state is security-sensitive and must be cleared appropriately during the context switch implementation. If you are interested to learn more, check out our Usenix Security '25 paper <a href="https://arxiv.org/abs/2502.06609">here</a>.
+During my internship at IBM Research, Zurich, I worked on improving the security of context switch code in privileged software by gathering ISA-level insights from the formal specification of the ISA written in machine-readable Sail. The Sail model is officially adopted as the ground-truth ISA specification by the RISC-V foundation. We leverage Sail to automatically extract which ISA-level state is security-sensitive and must be cleared appropriately during the context switch implementation. If you are interested to learn more, check out our USENIX Security '25 paper <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani">here</a>.
 
-### Internship at Intel Labs, Bangalore
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+
+### Internship at Intel Labs, Bangalore, 2021
 
 During my internship at Intel Labs, Bangalore, with my manager Dr. Niranjan Soundararajan, I worked on optimising different parts of the processor pipeline. We improved front-end throughput with enhancements to the micro-op cache. Check out our [patent](https://patents.google.com/patent/US20230103206A1/en) for more details. We also worked on optimising the performance of loads and stores in the processor pipeline. Check out our patent [here](https://patents.google.com/patent/US20230418757A1/en).   
 

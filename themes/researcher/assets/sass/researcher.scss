@@ -86,17 +86,17 @@ $y-medium: 1.0rem;
     .avatar > img {
         //border-radius: 50%;
         float: right;
-        margin: 15px 0 0 16px;
+        margin: 15px 15px 15px 15px;
         //height: $avatar-size;
         //width: $avatar-size;
         height: 180px;
-	width: 165px; 
+	    width: 165px; 
     }
     .avatar2 > img {
         float: right;
         margin: -8px 0 0 16px;
         height: 300px;
-	width: 140px; 
+	    width: 140px; 
     }
     ol {
         counter-reset: list;

@@ -70,6 +70,10 @@ googleAnalytics = "G-VCDPNZSN2W"  # add your tracking id
     name = "Research"
     url = "/research"
     weight = 2 
+  [[menu.main]]
+    name = "CV"
+    url = "https://drive.google.com/file/d/1xdd-aPaTTrNVzadJu9SPjlnnN7udhOGv/view?usp=share_link"
+    weight = 3 
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown files
