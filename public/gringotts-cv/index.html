@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gringotts Vault Keeper - Neelu S. Kalani</title>
+  <link rel="icon" type="image/png" href="assets/goblin.png">
+  <style>
+    @page {
+      size: Letter;
+      margin: 0;
+    }
+
+    :root {
+      --ink: #21160d;
+      --soft-ink: #59432c;
+      --parchment: #f2dfb6;
+      --parchment-light: #fff2d0;
+      --gold: #bd8531;
+      --gold-dark: #6f4818;
+      --green: #173d31;
+      --ivy: #315a37;
+      --red: #8a2f22;
+      --line: rgba(87, 54, 20, .32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: white;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .page {
+      position: relative;
+      width: 8.5in;
+      min-height: 11in;
+      margin: 24px auto;
+      padding: .38in .5in .34in .5in;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 72% 11%, rgba(189, 133, 49, .2), transparent 15%),
+        radial-gradient(circle at 9% 90%, rgba(49, 90, 55, .16), transparent 16%),
+        linear-gradient(120deg, var(--parchment-light), var(--parchment) 58%, #dfc495);
+      border: 7px solid #352313;
+      box-shadow: 0 24px 70px rgba(0, 0, 0, .44);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 14px;
+      pointer-events: none;
+      box-shadow:
+        inset 0 0 0 2px rgba(189, 133, 49, .72);
+    }
+
+    .credit {
+      position: absolute;
+      left: 24px;
+      bottom: .5in;
+      z-index: 2;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      color: rgba(33, 22, 13, .72);
+      font: 13px Arial, sans-serif;
+      letter-spacing: .4px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: .145in;
+    }
+
+    .topbar {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .18in;
+      align-items: stretch;
+    }
+
+    .brand {
+      display: grid;
+      grid-template-columns: 1.55in 1fr;
+      gap: .14in;
+      align-items: center;
+      min-height: 1.68in;
+    }
+
+    .profile {
+      display: grid;
+      grid-template-columns: 1.55in 1fr;
+      gap: .14in;
+      align-items: center;
+      min-height: 1.68in;
+      padding-left: .1in;
+      border-left: 2px dotted var(--line);
+    }
+
+    .hero-img,
+    .goblin-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 3px solid var(--gold-dark);
+      box-shadow: 0 4px 0 rgba(111, 72, 24, .2);
+    }
+
+    .hero-img {
+      height: 1.5in;
+      border-radius: 46% 54% 43% 57% / 55% 39% 61% 45%;
+      object-fit: cover;
+      background: rgba(255, 246, 220, .55);
+    }
+
+    .goblin-img {
+      height: 1.5in;
+      border-radius: 46% 54% 43% 57% / 55% 39% 61% 45%;
+      object-fit: cover;
+      background: rgba(255, 246, 220, .55);
+      object-position: center;
+    }
+
+    .vault-frame {
+      position: relative;
+      width: 100%;
+      height: 1.48in;
+      border-radius: 76% 0 0 54% / 62% 0 0 44%;
+      overflow: hidden;
+      border: 3px solid var(--gold-dark);
+      box-shadow:
+        0 4px 0 rgba(111, 72, 24, .2),
+        0 0 0 4px rgba(189, 133, 49, .24),
+        inset 0 0 0 3px rgba(255, 242, 208, .22);
+    }
+
+    .vault-frame.left {
+      border-radius: 0 58% 74% 0 / 0 48% 64% 0;
+    }
+
+    .vault-frame::after {
+      content: "";
+      position: absolute;
+      inset: -4px;
+      pointer-events: none;
+      border: 2px solid rgba(33, 22, 13, .45);
+      border-radius: inherit;
+      clip-path: polygon(2% 11%, 9% 3%, 20% 7%, 31% 2%, 43% 8%, 55% 4%, 67% 9%, 78% 3%, 91% 8%, 99% 17%, 96% 32%, 100% 47%, 95% 60%, 99% 74%, 91% 91%, 78% 96%, 66% 92%, 54% 98%, 41% 93%, 29% 99%, 18% 92%, 8% 97%, 1% 84%, 5% 68%, 0 53%, 4% 38%, 0 25%);
+    }
+
+    .vault-img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transform: scale(1.72);
+    }
+
+    .vault-img.soft-zoom {
+      transform: scale(1.22);
+    }
+
+    .vault-img.extra-soft-zoom {
+      transform: scale(1.06);
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--green);
+      font-size: 28px;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      margin: 8px 0 0;
+      color: var(--red);
+      font: 900 13px Arial, sans-serif;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .profile h2 {
+      margin: 0 0 4px;
+      color: var(--green);
+      font-size: 28px;
+      line-height: 1.05;
+      white-space: nowrap;
+    }
+
+    .profile p {
+      margin: 0;
+      color: var(--red);
+      font: 900 13px Arial, sans-serif;
+      letter-spacing: 1.4px;
+      line-height: 1.32;
+      text-transform: uppercase;
+    }
+
+    .intro {
+      grid-column: 1 / -1;
+      margin: .02in 0 .05in;
+      padding: .08in .1in;
+      color: var(--parchment-light);
+      background: linear-gradient(90deg, var(--green), #285a43);
+      border: 2px solid var(--gold);
+      font-size: 14.6px;
+      line-height: 1.3;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .main {
+      grid-column: 1;
+    }
+
+    .stats {
+      grid-column: 1;
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 1.05in;
+      gap: .12in;
+      padding: .13in;
+      background: rgba(255, 246, 220, .58);
+      border: 2px solid rgba(111, 72, 24, .62);
+      box-shadow: inset 0 0 0 1px rgba(33, 22, 13, .16);
+    }
+
+    h3,
+    .stats h3 {
+      grid-column: 1 / 3;
+      margin: 0 0 6px;
+      color: var(--red);
+      font: 900 13px Arial, sans-serif;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+    }
+
+    .feature {
+      display: grid;
+      grid-template-columns: 1fr 1.7in;
+      gap: .14in;
+      align-items: center;
+      margin-bottom: .085in;
+      padding: .045in 0;
+      overflow: hidden;
+    }
+
+    .feature.image-left {
+      grid-template-columns: 1.7in 1fr;
+    }
+
+    .feature.phd {
+      grid-template-columns: 1fr 1.42in;
+    }
+
+    h2 {
+      margin: 0 0 4px;
+      color: var(--green);
+      font-size: 19px;
+      line-height: 1.04;
+    }
+
+    .feature h2 {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: 21px;
+    }
+
+    .text-logo-row {
+      display: inline-grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .feature .company-heading {
+      font-size: 19px;
+      line-height: 1.12;
+    }
+
+    .date {
+      display: inline-block;
+      margin: 0 0 5px;
+      color: var(--red);
+      font: 900 11.6px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin: 0 0 7px;
+      font-size: 13.7px;
+      line-height: 1.3;
+    }
+
+    .pledge {
+      display: block;
+      margin-top: 6px;
+      color: var(--red);
+      font-weight: 700;
+    }
+
+    a {
+      color: var(--green);
+      font-weight: 700;
+      text-decoration-color: rgba(138, 47, 34, .58);
+      overflow-wrap: anywhere;
+    }
+
+    .company-heading {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      font-size: 15.5px;
+      line-height: 1.12;
+    }
+
+    .logo-img {
+      width: .82in;
+      max-height: .38in;
+      object-fit: contain;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      flex: 0 0 auto;
+    }
+
+    .intel-logo {
+      width: 1.18in;
+      max-height: .54in;
+    }
+
+    .iit-logo {
+      width: .98in;
+      max-height: .98in;
+      transform: none;
+    }
+
+    .epfl-logo {
+      width: .82in;
+      max-height: .36in;
+      object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .stat-block {
+      margin: 0 0 9px;
+    }
+
+    .stat-block b {
+      display: block;
+      margin-bottom: 3px;
+      color: var(--green);
+      font: 900 11.6px Arial, sans-serif;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .stat-block span {
+      display: block;
+      font-size: 11.9px;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
+    }
+
+    .traits-art {
+      grid-column: 3;
+      grid-row: 1 / span 3;
+      align-self: start;
+      justify-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      width: 1.05in;
+    }
+
+    .plant-img,
+    .books-img {
+      display: block;
+      height: auto;
+      pointer-events: none;
+    }
+
+    .plant-img {
+      width: 1.16in;
+      margin-top: -.13in;
+      position: relative;
+      z-index: 2;
+    }
+
+    .books-img {
+      width: .56in;
+      position: relative;
+      z-index: 1;
+    }
+
+    .books-img {
+      margin-top: -29px;
+    }
+
+    .footer {
+      grid-column: 1 / -1;
+      margin-top: .06in;
+      padding-top: .08in;
+      border-top: 3px double var(--gold-dark);
+      color: var(--green);
+      font: 900 11.6px Arial, sans-serif;
+      text-align: center;
+      letter-spacing: .8px;
+      text-transform: uppercase;
+    }
+
+    .footer a {
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .page {
+        margin: 0;
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        width: min(100%, 8.5in);
+        margin: 0;
+        padding: 26px;
+      }
+
+      .content,
+      .topbar,
+      .brand,
+      .profile,
+      .feature {
+        grid-template-columns: 1fr;
+      }
+
+      .brand,
+      .profile,
+      .intro,
+      .main,
+      .stats,
+      .footer {
+        grid-column: 1;
+      }
+
+      .stats {
+        grid-row: auto;
+      }
+
+      .profile {
+        border-left: 0;
+        padding-left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="credit">images generated with Gemini</div>
+
+    <div class="content">
+      <div class="topbar">
+        <section class="brand" aria-label="Resume title">
+          <img class="hero-img" src="assets/gringotts.png" alt="Gringotts-inspired bank illustration">
+          <div>
+            <h1>Gringotts Vault Keeper</h1>
+            <p class="subtitle">keeper of<br>valuable secrets in<br>confidential workloads</p>
+          </div>
+        </section>
+
+        <section class="profile" aria-label="Personal information">
+          <img class="goblin-img" src="assets/goblin.png" alt="Goblin banker illustration">
+          <div>
+            <h2>Neelu S. Kalani</h2>
+            <p>PhD Candidate at EPFL<br>Ecublens, Vaud, 1024<br>Switzerland<br>neelukalani7@gmail.com</p>
+          </div>
+        </section>
+      </div>
+
+      <p class="intro">The vault keeper has experience ranging from low-level software stack, ISA, as well as microarchitecture.</p>
+
+      <section class="main">
+        <div class="feature phd">
+          <div>
+            <h2>Building Secure Systems for RISC-V <img class="epfl-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Logo_EPFL_2019.svg/1280px-Logo_EPFL_2019.svg.png" alt="EPFL logo"></h2>
+            <span class="date">PhD thesis | present</span>
+            <p><strong>Trusted Boot and Confidential Computing</strong>: A Dynamic Root of Trust solution for removing firmware from the trusted compute base. Then using Physical Memory Protection to create secure enclaves. Formally proved desired security for the Dynamic Root of Trust solution. [<a href="https://arxiv.org/abs/2507.12364">Euro S&amp;P'26</a>, <a href="https://dl.acm.org/doi/10.1145/3731569.3764826">SOSP'25</a>, <a href="https://dl.acm.org/doi/10.1145/3698576.3698764">KISV'24</a>, <a href="https://dl.acm.org/doi/abs/10.1145/3593856.3595900">HotOS'23</a>, <a href="https://dl.acm.org/doi/pdf/10.1145/3578359.3593040">SysTEX'23</a>].<span class="pledge">Your workload's secret data will remain secure in the deepest vaults of the system.</span></p>
+          </div>
+          <div class="vault-frame">
+            <img class="vault-img" src="assets/vault.png" alt="Ancient vault illustration">
+          </div>
+        </div>
+
+        <div class="feature image-left">
+          <div class="vault-frame left">
+            <img class="vault-img extra-soft-zoom" src="assets/vault-2.png" alt="Vault clipart">
+          </div>
+          <div>
+            <h2 class="company-heading">Security Group at IBM Research, Zurich <img class="logo-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1280px-IBM_logo.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="IBM logo"></h2>
+            <span class="date">Research Intern | 2024</span>
+            <p>Secure context switches for zero leaks at the ISA-level [<a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani">USENIX Security 2025</a>].</p>
+          </div>
+        </div>
+
+        <div class="feature">
+          <div>
+            <h2 class="company-heading">Processor Architecture Research Group at Intel Labs, Bangalore <img class="logo-img intel-logo" src="https://avatars.githubusercontent.com/u/1492758?s=280&v=4" alt="Intel logo"></h2>
+            <span class="date">Research Intern | 2021</span>
+            <p>Optimizing the front-end of the processor pipeline with new insertion and replacement policies [<a href="https://patentimages.storage.googleapis.com/6a/8b/13/075d7355b2a9bc/US20230103206A1.pdf">US Patent US2023/0103206A1</a>, <a href="https://patentimages.storage.googleapis.com/12/c7/d4/41ba4c23ee978f/US20230418757A1.pdf">US Patent US2023/0418757A1</a>].</p>
+          </div>
+          <div class="vault-frame">
+            <img class="vault-img extra-soft-zoom" src="assets/vault-3.png" alt="Vault clipart">
+          </div>
+        </div>
+
+        <div class="feature image-left">
+          <div class="vault-frame left">
+            <img class="vault-img extra-soft-zoom" src="assets/vault-4.png" alt="Vault clipart">
+          </div>
+          <div>
+            <div class="text-logo-row">
+              <div>
+                <h2>Cache prefetching</h2>
+                <span class="date">Master's thesis | 2021</span>
+                <p>Energy-efficient data prefetching and high-performant<br>instruction prefetching for L1 caches.</p>
+                <p>[<a href="https://ieeexplore.ieee.org/document/9556556">IEEE CAL 2021</a>, <a href="https://research.ece.ncsu.edu/wp-content/uploads/sites/19/2020/05/JIP.pdf">IPC 1 @ ISCA 2020</a>]</p>
+              </div>
+              <img class="logo-img iit-logo" src="https://upload.wikimedia.org/wikipedia/sa/4/47/IIT_Kanpur_Logo.png" alt="IIT Kanpur logo">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="stats">
+        <h3>Vault Keeper's Traits: She likes plants. And ironically, books.</h3>
+        <div class="traits-art">
+          <img class="plant-img" src="https://static.vecteezy.com/system/resources/thumbnails/048/386/883/small/a-hanging-ivy-plants-on-pot-on-a-transparent-background-free-png.png" alt="Hanging ivy plant">
+          <img class="books-img" src="https://static.vecteezy.com/system/resources/thumbnails/036/519/174/small/ai-generated-book-stack-clipart-design-illustration-free-png.png" alt="Stack of books">
+        </div>
+        <div class="stat-block">
+          <b>Programming languages and technologies</b>
+          <span>C, C++, Rust, Python, Golang, Linux, GDB, QEMU, RISC-V, firmware, Confidential Computing, TPM, Git.</span>
+        </div>
+        <div class="stat-block">
+          <b>Fellowship | 2024</b>
+          <span>Winner of the <strong>Qualcomm Innovation</strong><br><strong>Fellowship (QIF) Europe</strong>.</span>
+        </div>
+        <div class="stat-block">
+          <b>Student Research Competition | 2021</b>
+          <span>2<sup>nd</sup> Prize in the <strong>ACM Student Research Competition (SRC) @ MICRO-54</strong>.</span>
+        </div>
+        <div class="stat-block">
+          <b>99.52 percentile nation-wide | 2019</b>
+          <span>Secured an All India Rank of 479 in the <strong>Graduate Aptitude Test in Engineering (GATE)</strong>.</span>
+        </div>
+      </aside>
+
+      <div class="footer">Ancient bank dossier | secrets sealed | workloads measured<br>Inspired by <a href="https://townsquare.media/site/393/files/2013/09/Redmon-Resume.pdf">Joseph Redmond's My Little Pony Resume</a></div>
+    </div>
+  </main>
+</body>
+</html>

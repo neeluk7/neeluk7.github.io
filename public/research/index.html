@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang=""><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -12,12 +12,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.3/css/academicons.min.css" integrity="sha512-vaoopdl+FJahyY2ddhsbDj8yDiRuyUYH/vIjF3z+cBg0sKc07NAQmUYli8volCGlW9OwlQyjVsr7Lh6qAManlw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/sass/researcher.min.css">
-    <link rel="icon" type="image/ico" href="http://localhost:1313/favicon.ico">
-    </head>
+    <link rel="icon" type="image/ico" href="https://neeluk7.github.io/favicon.ico">
+    <script>var doNotTrack = false;if (!doNotTrack) {
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'G-VCDPNZSN2W');
+}
+</script></head>
 
     <body><div class="container mt-5">
     <nav class="navbar navbar-expand-sm flex-column flex-sm-row text-nowrap p-0">
-        <a class="navbar-brand mx-0 mr-sm-auto" href="http://localhost:1313/" title="Neelu S. Kalani">
+        <a class="navbar-brand mx-0 mr-sm-auto" href="https://neeluk7.github.io/" title="Neelu S. Kalani">
           
           Neelu S. Kalani
         </a>
@@ -34,6 +40,20 @@
                 
                     <a class="nav-item nav-link" href="/research" title="Research">
                         Research
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="https://drive.google.com/file/d/1qz0hCXXrkmCyGNqIEjp_AXtAjVKjm1H9/view?usp=sharing" title="CV">
+                        CV
+                    </a>
+                    
+                        <span class="nav-item navbar-text mx-1">/</span>
+                    
+                
+                    <a class="nav-item nav-link" href="/gringotts-cv" title="Fun CV">
+                        Fun CV
                     </a>
                     
                 
@@ -58,9 +78,10 @@ My research interests broadly include confidential computing, computer systems a
 <p>A root of trust (RoT) is needed to establish trust in a privileged isolation monitor like Tyche. A dynamic RoT can help exclude the platform firmware, that runs in the same privileged mode as the monitor, from the trusted compute base (TCB). Unfortunately, existing solutions still include such firmware in the static root of trust chain, because there is no way to isolate the software executing in privileged modes like EL3/M-mode/SMM/etc. Instead of falling down the same rabbit hole of introducing a new privilege mode, we are designing ISA extensions to isolate M-mode software which can enable DRoT in RISC-V with a minimal TCB. If root of trust also interests you, I summarize the existing work and discuss the future trends in this field in my <a href="https://drive.google.com/file/d/1sH3dWik4bU6BGEwlTeFY4uQ2dEFqH5jI/view?usp=sharing">SOSP 2023 doctoral workshop paper</a>.</p>
 <p>Trusted runtimes are often overprivileged which can lead to Iago attacks. We worked on minimizing their privileges to harden the security guarantees towards the security sensitive applications, essentially enforcing the least privilege principle. To do this, we proposed an extension to RISC-V PMP; and evaluated it using the Keystone TEE framework. Check out our paper at <a href="https://dl.acm.org/doi/10.1145/3578359.359304">SysTEX 2023</a> for more details.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
-<h3 id="internship-at-ibm-research-zurich">Internship at IBM Research, Zurich</h3>
-<p>During my internship at IBM Research, Zurich, I worked on improving the security of context switch code in privileged software by gathering ISA-level insights from the formal specification of the ISA written in machine-readable Sail. The Sail model is officially adopted as the ground-truth ISA specification by the RISC-V foundation. We leverage Sail to automatically extract which ISA-level state is security-sensitive and must be cleared appropriately during the context switch implementation. If you are interested to learn more, check out our Usenix Security &lsquo;25 paper <a href="https://arxiv.org/abs/2502.06609">here</a>.</p>
-<h3 id="internship-at-intel-labs-bangalore">Internship at Intel Labs, Bangalore</h3>
+<h3 id="internship-at-ibm-research-zurich-2024">Internship at IBM Research, Zurich, 2024</h3>
+<p>During my internship at IBM Research, Zurich, I worked on improving the security of context switch code in privileged software by gathering ISA-level insights from the formal specification of the ISA written in machine-readable Sail. The Sail model is officially adopted as the ground-truth ISA specification by the RISC-V foundation. We leverage Sail to automatically extract which ISA-level state is security-sensitive and must be cleared appropriately during the context switch implementation. If you are interested to learn more, check out our USENIX Security &lsquo;25 paper <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani">here</a>.</p>
+<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+<h3 id="internship-at-intel-labs-bangalore-2021">Internship at Intel Labs, Bangalore, 2021</h3>
 <p>During my internship at Intel Labs, Bangalore, with my manager Dr. Niranjan Soundararajan, I worked on optimising different parts of the processor pipeline. We improved front-end throughput with enhancements to the micro-op cache. Check out our <a href="https://patents.google.com/patent/US20230103206A1/en">patent</a> for more details. We also worked on optimising the performance of loads and stores in the processor pipeline. Check out our patent <a href="https://patents.google.com/patent/US20230418757A1/en">here</a>.</p>
 <hr style="height:2px;border-width:0;color:gray;background-color:gray">
 <h3 id="hardware-cache-prefetching">Hardware Cache Prefetching</h3>
@@ -89,7 +110,7 @@ My research interests broadly include confidential computing, computer systems a
     
     
         <div class="container text-center">
-            <a href="http://localhost:1313/" title="By Neelu S. Kalani" ><small>By Neelu S. Kalani</small></a>
+            <a href="https://neeluk7.github.io/" title="By Neelu S. Kalani" ><small>By Neelu S. Kalani</small></a>
         </div>
     
 </div>

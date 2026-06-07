@@ -1,5 +1,5 @@
 title = "Neelu S. Kalani"
-baseURL = "https://example.com"
+baseURL = "https://neeluk7.github.io"
 theme = "researcher"
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
@@ -72,8 +72,12 @@ googleAnalytics = "G-VCDPNZSN2W"  # add your tracking id
     weight = 2 
   [[menu.main]]
     name = "CV"
-    url = "https://drive.google.com/file/d/1xdd-aPaTTrNVzadJu9SPjlnnN7udhOGv/view?usp=share_link"
+    url = "https://drive.google.com/file/d/1qz0hCXXrkmCyGNqIEjp_AXtAjVKjm1H9/view?usp=sharing"
     weight = 3 
+  [[menu.main]]
+    name = "Fun CV"
+    url = "/gringotts-cv"
+    weight = 4 
 
 [markup.goldmark.renderer]
   unsafe = true  # allow raw HTML in markdown files

@@ -75,15 +75,24 @@ My primary research interests revolve around computer systems security, computer
 <!-- -->
 
 <p style="margin-top:10px;margin-bottom:0px;">
-<b> Save what must be saved: Secure Context Switching with Sailor.</b> 
+<b>Flashpoint: Privileged-Software Isolation on RISC-V for Dynamic Root of Trust.</b>
 <br>
-USENIX Security 2025 
-<a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani"><i class="fa fa-file-pdf-o" style="color:red;float:right;margin-right:10px;"></i></a> 
-<a href="https://github.com/neeluk7/sailor_artifact"><i class="fa fa-code" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a> 
-<a href="https://www.usenix.org/system/files/usenixsecurity25-appendix-kalani.pdf"><i class="fa fa-file-code-o" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a>
+Under Review
+
 </p>
 <p style="margin-right:100px;">
-<span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Thomas Bourgeat, Guerney D. H. Hunt, and Wojciech Ozga
+<span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Charly Castes, Guokai Chen, Alexandre Doukhan, Daniel Bucher, Thomas Bourgeat and Edouard Bugnion
+</p>
+
+<p style="margin-top:10px;margin-bottom:0px;">
+<b>Tyche: Composable Isolation as a Foundation to Manage Trust in the Cloud.</b>
+<br>
+Euro S&P 2026 <a href="https://arxiv.org/abs/2507.12364"><i class="fa fa-file-pdf-o" style="color:red;float:right;margin-right:10px;"></i></a>
+<a href="https://github.com/epfl-dcsl/tyche-devel"><i class="fa fa-code" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a> 
+
+</p>
+<p style="margin-right:100px;">
+Adrien Ghosn, Charly Castes, <span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Yuchen Qian, Marios Kogias and Edouard Bugnion
 </p>
 
 <p style="margin-top:10px;margin-bottom:0px;">
@@ -98,14 +107,15 @@ Charly Castes, François Costa, <span style="color:#0096FF;font-weight: bold;">N
 </p>
 
 <p style="margin-top:10px;margin-bottom:0px;">
-<b>Rethinking the confidential cloud through a unified low-level abstraction for composable isolation.</b>
+<b> Save what must be saved: Secure Context Switching with Sailor.</b> 
 <br>
-ArXiv Preprint 2025 <a href="https://arxiv.org/abs/2507.12364"><i class="fa fa-file-pdf-o" style="color:red;float:right;margin-right:10px;"></i></a>
-<a href="https://github.com/epfl-dcsl/tyche-devel"><i class="fa fa-code" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a> 
-
+USENIX Security 2025 
+<a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani"><i class="fa fa-file-pdf-o" style="color:red;float:right;margin-right:10px;"></i></a> 
+<a href="https://github.com/neeluk7/sailor_artifact"><i class="fa fa-code" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a> 
+<a href="https://www.usenix.org/system/files/usenixsecurity25-appendix-kalani.pdf"><i class="fa fa-file-code-o" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a>
 </p>
 <p style="margin-right:100px;">
-Charly Castes, Adrien Ghosn, <span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Yuchen Qian, Marios Kogias and Edouard Bugnion
+<span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Thomas Bourgeat, Guerney D. H. Hunt, and Wojciech Ozga
 </p>
 
 <p style="margin-top:10px;margin-bottom:0px;">
