@@ -440,18 +440,54 @@
     }
 
     @media (max-width: 860px) {
+      body {
+        overflow-x: hidden;
+        background: #352313;
+      }
+
       .page {
-        width: min(100%, 8.5in);
+        width: 100vw;
+        max-width: 8.5in;
         margin: 0;
-        padding: 26px;
+        padding: 22px 18px 24px;
+        min-height: auto;
+        overflow: hidden;
+        border-width: 6px;
       }
 
       .content,
       .topbar,
       .brand,
       .profile,
-      .feature {
-        grid-template-columns: 1fr;
+      .feature,
+      .feature.phd,
+      .feature.image-left,
+      .stats,
+      .text-logo-row {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .content,
+      .topbar,
+      .brand,
+      .profile,
+      .intro,
+      .main,
+      .feature,
+      .stats,
+      .footer {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .content > *,
+      .topbar > *,
+      .brand > *,
+      .profile > *,
+      .feature > *,
+      .stats > *,
+      .text-logo-row > * {
+        min-width: 0;
       }
 
       .brand,
@@ -465,11 +501,146 @@
 
       .stats {
         grid-row: auto;
+        gap: 10px;
+        padding: 14px;
       }
 
       .profile {
         border-left: 0;
         padding-left: 0;
+      }
+
+      .hero-img,
+      .goblin-img,
+      .vault-frame {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+
+      .hero-img,
+      .goblin-img {
+        max-height: 190px;
+      }
+
+      .vault-frame {
+        max-height: 210px;
+      }
+
+      .brand,
+      .profile {
+        gap: 14px;
+        min-height: 0;
+      }
+
+      h1 {
+        max-width: 100%;
+        font-size: clamp(26px, 7.4vw, 32px);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .profile h2 {
+        white-space: normal;
+        font-size: clamp(26px, 7.6vw, 32px);
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .subtitle,
+      .profile p {
+        font-size: 13px;
+        letter-spacing: 1.2px;
+      }
+
+      .intro {
+        white-space: normal;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+
+      .feature {
+        gap: 12px;
+        margin-bottom: 18px;
+        padding: 0;
+      }
+
+      .feature.image-left .vault-frame {
+        order: 2;
+      }
+
+      .feature.image-left > div:last-child {
+        order: 1;
+      }
+
+      h2,
+      .feature h2,
+      .feature .company-heading,
+      .company-heading {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 100%;
+        font-size: clamp(20px, 5.7vw, 24px);
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 1.34;
+        overflow-wrap: anywhere;
+        word-break: break-word;
+      }
+
+      .logo-img,
+      .intel-logo,
+      .iit-logo,
+      .epfl-logo {
+        width: auto;
+        max-width: min(28vw, 1.05in);
+        max-height: .42in;
+        flex-basis: 100%;
+      }
+
+      .text-logo-row {
+        display: grid;
+      }
+
+      .text-logo-row .iit-logo {
+        justify-self: start;
+        max-height: .72in;
+        max-width: .72in;
+      }
+
+      .stats h3,
+      .traits-art {
+        grid-column: 1;
+      }
+
+      .traits-art {
+        grid-row: auto;
+        justify-self: start;
+        flex-direction: row;
+        width: auto;
+        gap: 8px;
+      }
+
+      .plant-img {
+        width: .82in;
+        margin-top: 0;
+      }
+
+      .books-img {
+        width: .46in;
+        margin-top: 0;
+      }
+
+      .credit {
+        left: 8px;
+        bottom: 18px;
+        font-size: 11px;
       }
     }
   </style>
