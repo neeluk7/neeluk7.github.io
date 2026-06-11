@@ -78,7 +78,7 @@ My primary research interests revolve around computer systems security, computer
 <b>Flashpoint: Privileged-Software Isolation on RISC-V for Dynamic Root of Trust.</b>
 <br>
 Under Review
-
+<a href="https://flashpoint-root-of-trust.github.io"><i class="fa fa-external-link" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a>
 </p>
 <p style="margin-right:100px;">
 <span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Charly Castes, Guokai Chen, Alexandre Doukhan, Daniel Bucher, Thomas Bourgeat and Edouard Bugnion
@@ -113,6 +113,7 @@ USENIX Security 2025
 <a href="https://www.usenix.org/conference/usenixsecurity25/presentation/kalani"><i class="fa fa-file-pdf-o" style="color:red;float:right;margin-right:10px;"></i></a> 
 <a href="https://github.com/neeluk7/sailor_artifact"><i class="fa fa-code" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a> 
 <a href="https://www.usenix.org/system/files/usenixsecurity25-appendix-kalani.pdf"><i class="fa fa-file-code-o" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a>
+<a href="https://sailor-context-switch.github.io"><i class="fa fa-external-link" aria-hidden="true" style="color:red;float:right;margin-right:10px;"></i></a>
 </p>
 <p style="margin-right:100px;">
 <span style="color:#0096FF;font-weight: bold;">Neelu S. Kalani</span>, Thomas Bourgeat, Guerney D. H. Hunt, and Wojciech Ozga
